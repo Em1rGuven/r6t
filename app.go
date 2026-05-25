@@ -47,7 +47,7 @@ func (s *App) ChangeWordCount(num int) error {
 
 func (s *App) AddWord(engWord, turWord, path string) error {
 	if engWord == "" || turWord == "" {
-		return fmt.Errorf("invalid input")
+		return fmt.Errorf("eng or tur word is empty")
 	}
 	return s.dbDI.AddWord(engWord, turWord, path)
 }
